@@ -1,5 +1,5 @@
 {
-  "name": "@mondragonda/plugin-gcp-cloudworkstations",
+  "name": "@backstage/plugin-gcp-cloudworkstations",
   "description": "A plugin that integrates Google Cloud Workstations with Backstage.",
   "version": "0.0.0",
   "main": "dist/index.esm.js",
@@ -47,7 +47,7 @@
     "react-router-dom": "6.0.0-beta.0 || ^6.3.0"
   },
   "peerDependencies": {
-    "react": "^16.13.1 || ^17.0.0 || ^18.0.0",
+    "react": "^16.13.1 || ^17.0.0",
     "react-router-dom": "6.0.0-beta.0 || ^6.3.0"
   },
   "devDependencies": {
