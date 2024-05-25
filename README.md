@@ -6,14 +6,62 @@ This plugin allows you to link [GCP Cloud Workstations](https://cloud.google.com
 
 <img src="./gcpworkstations_page.png" width="800">
 
-## Installation Steps
+## Local Installation steps
 
-### Install the plugin into backstage
+### Clone the plugin repository on a local folder
 
 ```bash
-cd packages/app
-yarn add @backstage/plugin-gcp-cloudworkstations
+mkdir ./backstage-local-plugins-install
+cd ./backstage-local-plugins-install
+git clone git@github.com:mondragonda/gcp-cloudworkstations.git
 ```
+
+### Build the plugin
+
+```bash
+cd ./gcp-cloudworkstations
+yarn install
+yarn clean
+yarn tsc
+yarn build
+```
+
+### Go to the backstage app local directory and install the plugin
+
+```bash
+cd ../../backstage
+cd packages/app
+yarn add file://[path-to-backstage-local-plugins-directory]/gcp-cloudworkstations
+```
+
+### Grant the necessary Google Cloud IAM roles having the necessary permissions for CloudWorkstations
+
+- workstations.workstations.list
+- workstations.workstations.get
+- workstations.workstations.start
+- workstations.workstations.stop
+- workstations.workstations.use (launch and use workstations within the plugin)
+- workstations.workstations.delete
+
+### Set up Google OAuth Backstage authentication
+
+The plugin authenticates with Google Cloud through [Backstage Google Authentication Provider](https://backstage.io/docs/auth/google/provider).
+
+After adding the necessary config for Google Auth given in the link above. Add the 
+`plugin-auth-backend-module-google-provider` to the backend module.
+
+To install the backend module: `yarn add @backstage/plugin-auth-backend-module-google-provider` in `./packages/backend`
+and add the following to the `backend/src/index.ts`
+
+```diff
+   backend.add(import('@backstage/plugin-search-backend/alpha'));
+   backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
+   backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
+
++  backend.add(import('@backstage/plugin-auth-backend-module-google-provider'));
+```
+
+
 
 ### Add annotation to your component-info.yaml file.
 

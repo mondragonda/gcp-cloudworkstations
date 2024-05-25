@@ -29,3 +29,5 @@ export {
 export * from './api';
 export { Router, isGCPCloudWorkstationsAvailable } from './components/Router';
 export { GCP_CLOUDWORKSTATIONS_CONFIG_ANNOTATION } from './components/useWorkstations';
+export * from './components/types';
+export * from './api/types';
