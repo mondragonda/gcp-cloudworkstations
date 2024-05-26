@@ -158,8 +158,8 @@ export class WorkstationsApiClient implements CloudWorkstationsApi {
     fetchResult: Promise<Response>,
   ): Promise<Record<string, any> | any[] | undefined> {
     const response = await fetchResult;
-    const responseContent = await response.json();
-    if (!response.ok) {
+    const responseContent = await response?.json();
+    if (!response?.ok) {
       if (responseContent?.error) {
         this.errorApi.post({
           name: 'google_cloud_api_response_error',
