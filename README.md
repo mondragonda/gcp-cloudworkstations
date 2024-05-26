@@ -24,6 +24,7 @@ yarn install
 yarn clean
 yarn tsc
 yarn build
+rm -rf node_modules (avoid overriding the peer deps)
 ```
 
 ### Go to the backstage app local directory and install the plugin
