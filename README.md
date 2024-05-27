@@ -2,9 +2,9 @@
 
 This plugin allows you to link [GCP Cloud Workstations](https://cloud.google.com/workstations/docs/overview) with Backstage components.
 
-<img src="./gcpworkstations_card.png" width="800">
+<img src="./docs/gcpworkstations_card.png" width="800">
 
-<img src="./gcpworkstations_page.png" width="800">
+<img src="./docs/gcpworkstations_page.png" width="800">
 
 ## Local Installation steps
 
