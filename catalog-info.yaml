@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-test-component
+  annotations:
+    google.com/cloudworkstations-config: projects/analog-foundry-221089/locations/us-west1/workstationClusters/cluster-lr6umul5/workstationConfigs/config-lr6unih7
+spec:
+  type: website
+  lifecycle: experimental
+  owner: guests
+  system: examples
+  providesApis: [example-grpc-api]
