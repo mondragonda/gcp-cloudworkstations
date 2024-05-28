@@ -120,7 +120,7 @@ const overviewContent = (
 
 #### or
 
-#### For a routable tab section on the entity page. In your `serviceEntityPage` constant, add the following entity layout route:
+#### For a routable tab section on the entity page. Depending on the entity spec type add in your `serviceEntityPage` or `websiteEntityPage` or `defaultEntityPage` the following entity layout route:
 
 ```diff
 // packages/app/src/components/catalog/EntityPage.tsx
