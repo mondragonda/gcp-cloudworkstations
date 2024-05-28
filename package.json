@@ -1,5 +1,5 @@
 {
-  "name": "@mondragonda/plugin-gcp-cloudworkstations",
+  "name": "@googlecloud-backstage-plugins/cloudworkstations",
   "description": "A plugin that integrates Google Cloud Workstations with Backstage.",
   "version": "0.0.1",
   "main": "src/index.ts",

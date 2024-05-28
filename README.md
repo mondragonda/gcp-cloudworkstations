@@ -6,14 +6,6 @@ This plugin allows you to link [GCP Cloud Workstations](https://cloud.google.com
 
 <img src="./docs/gcpworkstations_page.png" width="800">
 
-## Installation
-
-```bash
-cd ./backstage
-cd packages/app
-yarn add @mondragonda/plugin-gcp-cloudworkstations
-```
-
 ## Local installation instructions
 
 ### Clone the plugin repository on a local folder
@@ -104,9 +96,9 @@ import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
-+import { WorkstationsCard } from '@backstage/plugin-gcp-cloudworkstations';
-+import { isGCPCloudWorkstationsAvailable } from '@backstage/plugin-gcp-cloudworkstations';
-+import { GcpCloudworkstationsPage } from '@backstage/plugin-gcp-cloudworkstations';
++import { WorkstationsCard } from '@googlecloud-backstage-plugins/cloudworkstations';
++import { isGCPCloudWorkstationsAvailable } from '@googlecloud-backstage-plugins/cloudworkstations';
++import { GcpCloudworkstationsPage } from '@googlecloud-backstage-plugins/cloudworkstations';
 ```
 
 #### In your `overviewContent` constant, add the following switch case:
