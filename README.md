@@ -6,6 +6,13 @@ This plugin allows you to link [GCP Cloud Workstations](https://cloud.google.com
 
 <img src="./docs/gcpworkstations_page.png" width="800">
 
+
+## Prerequisites
+
+Installation of the following packages are needed before building:
+
+- [node-gyp](https://github.com/nodejs/node-gyp)
+
 ## Local installation instructions
 
 ### Clone the plugin repository on a local folder
