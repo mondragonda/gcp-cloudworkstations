@@ -18,6 +18,7 @@ import { WorkstationConfig } from '../components/types';
 import { IAM_WORKSTATIONS_PERMISSION, Workstation } from './types';
 import { CloudWorkstationsApi } from './workstationsApi';
 import { ErrorApi, FetchApi, OAuthApi } from '@backstage/core-plugin-api';
+import packageinfo from '../../package.json';
 
 export const GCP_CLOUDWORKSTATIONS_API_URL =
   'https://workstations.googleapis.com/v1';
@@ -151,6 +152,7 @@ export class WorkstationsApiClient implements CloudWorkstationsApi {
     );
     return {
       Authorization: `Bearer ${token}`,
+      'X-Goog-Api-Client': `backstage/cloudworkstations/${packageinfo.version}`,
     };
   }
 
