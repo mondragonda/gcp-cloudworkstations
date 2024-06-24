@@ -152,7 +152,7 @@ export class WorkstationsApiClient implements CloudWorkstationsApi {
     );
     return {
       Authorization: `Bearer ${token}`,
-      'X-Goog-Api-Client': `backstage/cloudworkstations/${packageinfo.version}`,
+      'X-Goog-Api-Client': `backstage/workstations/${packageinfo.version}`,
     };
   }
 
